@@ -3,14 +3,14 @@ import style from './PostCard.module.css'
 
 export class PostCard extends Component {
     render() {
-        const { name,    urlToImage } = this.props
+        const { name,urlToImage, title } = this.props
         console.log(name);
         return (
             <div className={style['card__wrapper']}>
                 <div className={style["card"]}>
                     <div className={style['card__images']}>
                         <img
-                            src={urlToImage}
+                            src={urlToImage || 'https://bitsofco.de/img/Qo5mfYDE5v-350.png'}
                             alt='dvsvds'
                             className={style["card__img"]}
                         />
@@ -18,7 +18,7 @@ export class PostCard extends Component {
                     </div>
                     <div className={style["card__body"]}>
                         <p className={style["card-title"]}>
-                            {/* {title} */}
+                            {title}
                         </p>
                         <a href="#btn" className={style["button"]}>
                             ReadMore

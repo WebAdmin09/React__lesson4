@@ -27,7 +27,7 @@ export class PostPage extends Component {
         const { newapi, loading } = this.state
         console.log(newapi);
         return (
-            <section>
+            <section id='post__page'>
                 <h1 className={style['heading']}>All News</h1>
                 {loading ? (<ServiceLoading />) :
                     newapi.map((post) => <PostCard {...post} />)
